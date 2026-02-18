@@ -99,7 +99,7 @@ def ota_update(file_path):
                     progress = offset / file_size * 100
                     sys.stdout.write(f"\rProgress: {progress:.1f}% [{offset}/{file_size}]")
                     sys.stdout.flush()
-                    break;
+                    break
                 else:
                     print(f"\nError at offset {offset}: No ACK or NACK (Got {ack})")
                     if attempt == 4:
@@ -127,9 +127,104 @@ def ota_update(file_path):
     return True
 
 
+# --- 差分升级主流程 ---
+def ota_update_diff(path_old, path_new):
+    if not os.path.exists(path_old):
+        print("Error: Old file not found.")
+        return
+    if not os.path.exists(path_new):
+        print("Error: New file not found.")
+        return
+
+    try:
+        ser = serial.Serial(SERIAL_PORT, BAUD_RATE, timeout=1.0)    # 这里设置阻塞时间
+        print(f"Opened {SERIAL_PORT} successfully.")
+    except Exception as e:
+        print(f"Serial Error: {e}")
+        return
+
+    file_size = os.path.getsize(path_new)
+    actual_size = file_size     # 记录实际更新包大小（主要用于差分升级相关）
+    print(f"Start OTA: {path_new} ({file_size} bytes)")
+
+    # 先发送开始信号
+    frame = build_frame(CMD_START, b"")     # 字符串不能和字节串相加，因此这里确保是字节串
+    ser.write(frame)
+    ack = ser.read(1)
+    for attempt in range(5):
+        if ack == b'\x06':
+            break
+        else:
+            print(f"\nStart Error, No ACK or NACK (Got {ack})")
+            ser.write(frame)
+            ack = ser.read(1)
+            if attempt == 4:
+                print("\nClose serial")
+                ser.close()
+                return False
+
+    with (open(path_old, 'rb') as f1,
+          open(path_new, 'rb') as f2): # with使得结束后自动close
+        offset = 0
+        while True:
+            chunk1 = f1.read(128)
+            chunk2 = f2.read(128)
+            if not chunk2:
+                break
+
+            # 分情况组包
+            if chunk1 == chunk2:
+                # print(f"\nSame at offset {offset}")
+                actual_size -= 128
+                frame = build_frame(CMD_COPY, chunk2)
+            else:
+                frame = build_frame(CMD_WRITE, chunk2)
+
+            for attempt in range(5):
+                ser.write(frame)
+                ack = ser.read(1)
+                if ack == b'\x06':
+                    offset += len(chunk2)
+                    progress = offset/file_size*100
+                    sys.stdout.write(f"\rProgress: {progress:.1f}% [{offset}/{file_size}]")
+                    sys.stdout.flush()
+                    break
+                else:
+                    print(f"\nError at offset {offset}: No ACK or NACK (Got {ack})")
+                    if attempt == 4:
+                        print("\nClose serial")
+                        ser.close()
+                        return False
+
+        # 结束信号
+        frame = build_frame(CMD_COMPLETE, b"")
+        ser.write(frame)
+        ack = ser.read(1)
+        for attempt in range(5):
+            if ack == b'\x06':
+                break
+            else:
+                print("\nStart Error")
+                ser.write(frame)
+                ack = ser.read(1)
+                if attempt == 4:
+                    print("\nClose serial")
+                    ser.close()
+                    return False
+        print(f"\nactual download size : {actual_size}")
+
+
 if __name__ == "__main__":
-    path = input("\nPlease enter path of target file(.bin): ")
-    if len(path)==0:
-        ota_update(r"J:\my_project\04_my_github\ota-update\stm32\app\MDK-ARM\stm32f407vet6\stm32f407vet6.bin")
-    else:
-        ota_update(path)
+    res = input("\nPlease choose update mode:\n[A] normal\n[B] diff: ")
+
+    if res == "A":
+        path = input("\nPlease enter path of target file(.bin): ")
+        if len(path)==0:
+            ota_update(r"J:\my_project\04_my_github\ota-update\stm32\app\version_bin\version_1_0.bin")
+        else:
+            ota_update(path)
+
+    elif res == "B":
+        old = input("\nPlease enter old path of target file(.bin): ")
+        new = input("\nPlease enter new path of target file(.bin): ")
+        ota_update_diff(old, new)

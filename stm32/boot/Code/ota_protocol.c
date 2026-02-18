@@ -10,7 +10,9 @@ extern UART_HandleTypeDef huart6;
 #include "flash.h"
 
 #define get_download_addr()                 bootloader_get_backup_addr()
+#define get_app_addr()						bootloader_get_active_addr()
 #define erase_flash_sector(addr)                flash_erase(addr, 1)
+#define read_from_flash(addr, pdata, size)			flash_read_generic(addr, pdata, size)
 #define write_to_flash(addr, pdata, size)         flash_write_generic(addr, pdata, size)
 //=======================================================
 
@@ -61,7 +63,7 @@ void ota_protocol_process(void){
 	if(ota_protocol_recv_flag==0)   return ;
     ota_protocol_recv_flag = 0;
 
-    static uint32_t download_addr;
+    static uint32_t download_addr, app_addr;
     if(ota_protocol_buffer[0]!=0x55 || ota_protocol_buffer[1]!=0xAA){
         return ;
     }
@@ -81,6 +83,7 @@ void ota_protocol_process(void){
     frame_info.cmd = ota_protocol_buffer[3];
     if(frame_info.cmd == CMD_START){
 		LOG_INFO(TAG, "CMD_START");
+		app_addr = get_app_addr();
         download_addr = get_download_addr();
         erase_flash_sector(download_addr);
         uint8_t ack = ACK;
@@ -94,13 +97,19 @@ void ota_protocol_process(void){
 		HAL_NVIC_SystemReset();
     }
     else if(frame_info.cmd == CMD_COPY){
-
+		read_from_flash(app_addr, frame_info.payload, frame_info.len);
+		write_to_flash(download_addr, frame_info.payload, frame_info.len);
+		LOG_DEBUG(TAG, "Copy to 0x%08x", download_addr);
+        download_addr += frame_info.len;	// COPY_CMD should full of 128 btyes payload so that the len is 128
+		app_addr += frame_info.len;		// old frame size is same as new unless near the end
+        uint8_t ack = ACK;
+        uart_tans_func(&ack, 1);
     }
     else if(frame_info.cmd == CMD_WRITE){
-//		LOG_DEBUG(TAG, "%d %d %d %d", ota_protocol_buffer[4], ota_protocol_buffer[5], ota_protocol_buffer[4+frame_info.len-2], ota_protocol_buffer[4+frame_info.len-1]);
         write_to_flash(download_addr, &ota_protocol_buffer[4], frame_info.len);
-//		LOG_DEBUG(TAG, "Write to 0x%08x", download_addr);
-        download_addr += frame_info.len;
+		LOG_DEBUG(TAG, "Write to 0x%08x", download_addr);
+        download_addr += frame_info.len;	// COPY_CMD should full of 128 btyes payload so that the len is 128
+		app_addr += frame_info.len;		// old frame size is same as new unless near the end
         uint8_t ack = ACK;
         uart_tans_func(&ack, 1);
     }

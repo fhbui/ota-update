@@ -27,20 +27,18 @@ Project File Date:  02/16/2026
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'J:\software\Keil_v5_32\ARM\ARMCC\Bin'
 Build target 'stm32f407vet6'
-compiling ota_protocol.c...
+compiling bootloader.c...
 ..\Code\log.h(21): warning:  #1-D: last line of file ends without a newline
   #endif
-..\Code\ota_protocol.c(77): warning:  #223-D: function "log_msg_level" declared implicitly
-          LOG_ERROR(TAG, "CRC Verification error! calculated is %d, recevied is %d", frame_info.crc, (uint16_t)(ota_protocol_buffer[crc_index] | (ota_protocol_buffer[crc_index+1]<<8)));
-..\Code\ota_protocol.c(83): warning:  #223-D: function "log_msg_level" declared implicitly
-  		LOG_INFO(TAG, "CMD_START");
-..\Code\ota_protocol.c(90): warning:  #223-D: function "log_msg_level" declared implicitly
-          LOG_INFO(TAG, "CMD_COMPLETE");
-..\Code\ota_protocol.c: 4 warnings, 0 errors
+..\Code\bootloader.c(81): warning:  #223-D: function "log_msg_level" declared implicitly
+  	LOG_DEBUG(TAG, "new partition is 0x%08x", shared_info.active_app_addr);
+..\Code\bootloader.c(93): warning:  #223-D: function "log_msg_level" declared implicitly
+  	LOG_DEBUG(TAG, "active addr is 0x%08x", shared_info.active_app_addr);
+..\Code\bootloader.c: 3 warnings, 0 errors
 linking...
-Program Size: Code=13996 RO-data=588 RW-data=56 ZI-data=4864  
+Program Size: Code=14116 RO-data=588 RW-data=60 ZI-data=4868  
 FromELF: creating hex file...
-"stm32f407vet6\stm32f407vet6.axf" - 0 Error(s), 4 Warning(s).
+"stm32f407vet6\stm32f407vet6.axf" - 0 Error(s), 3 Warning(s).
 
 <h2>Software Packages used:</h2>
 

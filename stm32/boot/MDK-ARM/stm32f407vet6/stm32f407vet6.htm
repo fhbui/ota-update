@@ -3,7 +3,7 @@
 <title>Static Call Graph - [stm32f407vet6\stm32f407vet6.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image stm32f407vet6\stm32f407vet6.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Tue Feb 17 10:37:14 2026
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Wed Feb 18 21:58:18 2026
 <BR><P>
 <H3>Maximum Stack Usage =        184 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -132,7 +132,7 @@ Global Symbols
 <P><STRONG><a name="[5d]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f407xx.o(.text)
 </UL>
-<P><STRONG><a name="[d6]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
+<P><STRONG><a name="[d7]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
 
 <P><STRONG><a name="[63]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
@@ -142,17 +142,17 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[d7]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
+<P><STRONG><a name="[d8]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
 
-<P><STRONG><a name="[d8]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
+<P><STRONG><a name="[d9]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
 
-<P><STRONG><a name="[d9]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
+<P><STRONG><a name="[da]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
 
-<P><STRONG><a name="[da]"></a>__rt_lib_shutdown_fini</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry12b.o(.ARM.Collect$$$$0000000E))
+<P><STRONG><a name="[db]"></a>__rt_lib_shutdown_fini</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry12b.o(.ARM.Collect$$$$0000000E))
 
-<P><STRONG><a name="[db]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000F))
+<P><STRONG><a name="[dc]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000F))
 
-<P><STRONG><a name="[dc]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$00000011))
+<P><STRONG><a name="[dd]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$00000011))
 
 <P><STRONG><a name="[c1]"></a>MSR_MSP</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, bootloader.o(.emb_text))
 <BR><BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bootloader_executeapp
@@ -413,9 +413,9 @@ Global Symbols
 <LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 </UL>
 
-<P><STRONG><a name="[dd]"></a>__aeabi_memset4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[de]"></a>__aeabi_memset4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
-<P><STRONG><a name="[de]"></a>__aeabi_memset8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[df]"></a>__aeabi_memset8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
 <P><STRONG><a name="[68]"></a>__aeabi_memclr</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
@@ -427,21 +427,21 @@ Global Symbols
 <LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
-<P><STRONG><a name="[df]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[e0]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
 <P><STRONG><a name="[6a]"></a>_memset$wrapper</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, memseta.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
 </UL>
 
-<P><STRONG><a name="[cc]"></a>strcmp</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, strcmp.o(.text))
+<P><STRONG><a name="[cd]"></a>strcmp</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, strcmp.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = strcmp
 </UL>
-<BR>[Called By]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_interact_main
-<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_update
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_wakeup_singal
+<BR>[Called By]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_interact_main
+<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_update
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_wakeup_singal
 </UL>
 
-<P><STRONG><a name="[e0]"></a>__aeabi_uidiv</STRONG> (Thumb, 0 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
+<P><STRONG><a name="[e1]"></a>__aeabi_uidiv</STRONG> (Thumb, 0 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
 
 <P><STRONG><a name="[bf]"></a>__aeabi_uidivmod</STRONG> (Thumb, 44 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
@@ -454,7 +454,7 @@ Global Symbols
 <LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
 </UL>
 
-<P><STRONG><a name="[e1]"></a>_ll_shift_l</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llshl.o(.text), UNUSED)
+<P><STRONG><a name="[e2]"></a>_ll_shift_l</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llshl.o(.text), UNUSED)
 
 <P><STRONG><a name="[66]"></a>__aeabi_llsr</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, llushr.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
@@ -462,9 +462,9 @@ Global Symbols
 <LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
 </UL>
 
-<P><STRONG><a name="[e2]"></a>_ll_ushift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llushr.o(.text), UNUSED)
+<P><STRONG><a name="[e3]"></a>_ll_ushift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llushr.o(.text), UNUSED)
 
-<P><STRONG><a name="[e3]"></a>__I$use$fp</STRONG> (Thumb, 0 bytes, Stack size 48 bytes, iusefp.o(.text), UNUSED)
+<P><STRONG><a name="[e4]"></a>__I$use$fp</STRONG> (Thumb, 0 bytes, Stack size 48 bytes, iusefp.o(.text), UNUSED)
 
 <P><STRONG><a name="[6b]"></a>__aeabi_dadd</STRONG> (Thumb, 322 bytes, Stack size 48 bytes, dadd.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_lasr
@@ -514,13 +514,13 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
 </UL>
 
-<P><STRONG><a name="[e4]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+<P><STRONG><a name="[e5]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
 
 <P><STRONG><a name="[6c]"></a>__aeabi_lasr</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, llsshr.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 </UL>
 
-<P><STRONG><a name="[e5]"></a>_ll_sshift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llsshr.o(.text), UNUSED)
+<P><STRONG><a name="[e6]"></a>_ll_sshift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llsshr.o(.text), UNUSED)
 
 <P><STRONG><a name="[6e]"></a>_double_round</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, depilogue.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
@@ -637,7 +637,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_wakeup_singal
+<BR>[Called By]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_wakeup_singal
 </UL>
 
 <P><STRONG><a name="[81]"></a>HAL_FLASHEx_Erase</STRONG> (Thumb, 144 bytes, Stack size 32 bytes, stm32f4xx_hal_flash_ex.o(i.HAL_FLASHEx_Erase))
@@ -648,12 +648,12 @@ Global Symbols
 <LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_Erase_Sector
 <LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_WaitForLastOperation
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_erase
+<BR>[Called By]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_erase
 </UL>
 
-<P><STRONG><a name="[d1]"></a>HAL_FLASH_Lock</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, stm32f4xx_hal_flash.o(i.HAL_FLASH_Lock))
-<BR><BR>[Called By]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_write_generic
-<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_erase
+<P><STRONG><a name="[d2]"></a>HAL_FLASH_Lock</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, stm32f4xx_hal_flash.o(i.HAL_FLASH_Lock))
+<BR><BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_write_generic
+<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_erase
 </UL>
 
 <P><STRONG><a name="[85]"></a>HAL_FLASH_Program</STRONG> (Thumb, 116 bytes, Stack size 32 bytes, stm32f4xx_hal_flash.o(i.HAL_FLASH_Program))
@@ -665,12 +665,12 @@ Global Symbols
 <LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_Program_DoubleWord
 <LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_Program_Byte
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_write_generic
+<BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_write_generic
 </UL>
 
-<P><STRONG><a name="[d0]"></a>HAL_FLASH_Unlock</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, stm32f4xx_hal_flash.o(i.HAL_FLASH_Unlock))
-<BR><BR>[Called By]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_write_generic
-<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_erase
+<P><STRONG><a name="[d1]"></a>HAL_FLASH_Unlock</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, stm32f4xx_hal_flash.o(i.HAL_FLASH_Unlock))
+<BR><BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_write_generic
+<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_erase
 </UL>
 
 <P><STRONG><a name="[a2]"></a>HAL_GPIO_DeInit</STRONG> (Thumb, 320 bytes, Stack size 36 bytes, stm32f4xx_hal_gpio.o(i.HAL_GPIO_DeInit))
@@ -759,8 +759,8 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
 </UL>
 
-<P><STRONG><a name="[d5]"></a>HAL_NVIC_SystemReset</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f4xx_hal_cortex.o(i.HAL_NVIC_SystemReset))
-<BR><BR>[Called By]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ota_protocol_process
+<P><STRONG><a name="[d6]"></a>HAL_NVIC_SystemReset</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f4xx_hal_cortex.o(i.HAL_NVIC_SystemReset))
+<BR><BR>[Called By]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ota_protocol_process
 </UL>
 
 <P><STRONG><a name="[92]"></a>HAL_RCC_ClockConfig</STRONG> (Thumb, 288 bytes, Stack size 32 bytes, stm32f4xx_hal_rcc.o(i.HAL_RCC_ClockConfig))
@@ -911,7 +911,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_WaitOnFlagUntilTimeout
 </UL>
-<BR>[Called By]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ota_protocol_process
+<BR>[Called By]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ota_protocol_process
 </UL>
 
 <P><STRONG><a name="[9d]"></a>HAL_UART_TxCpltCallback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f4xx_hal_uart.o(i.HAL_UART_TxCpltCallback))
@@ -1045,49 +1045,49 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
-<P><STRONG><a name="[e6]"></a>__1printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
+<P><STRONG><a name="[e7]"></a>__1printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
 
-<P><STRONG><a name="[cb]"></a>__2printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf))
+<P><STRONG><a name="[cc]"></a>__2printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __2printf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_interact_main
-<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_update
-<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_write_generic
-<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_erase
-<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;log_msg_level
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_wakeup_singal
+<BR>[Called By]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_interact_main
+<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_update
+<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_write_generic
+<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_erase
+<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;log_msg_level
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_wakeup_singal
 <LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[e7]"></a>__c89printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
+<P><STRONG><a name="[e8]"></a>__c89printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
 
-<P><STRONG><a name="[e8]"></a>printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
+<P><STRONG><a name="[e9]"></a>printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
 
 <P><STRONG><a name="[ba]"></a>__0vprintf</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, printfa.o(i.__0vprintf), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
-<P><STRONG><a name="[e9]"></a>__1vprintf</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, printfa.o(i.__0vprintf), UNUSED)
+<P><STRONG><a name="[ea]"></a>__1vprintf</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, printfa.o(i.__0vprintf), UNUSED)
 
-<P><STRONG><a name="[ea]"></a>__2vprintf</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, printfa.o(i.__0vprintf), UNUSED)
+<P><STRONG><a name="[eb]"></a>__2vprintf</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, printfa.o(i.__0vprintf), UNUSED)
 
-<P><STRONG><a name="[eb]"></a>__c89vprintf</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, printfa.o(i.__0vprintf), UNUSED)
+<P><STRONG><a name="[ec]"></a>__c89vprintf</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, printfa.o(i.__0vprintf), UNUSED)
 
-<P><STRONG><a name="[d2]"></a>vprintf</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, printfa.o(i.__0vprintf))
-<BR><BR>[Called By]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;log_msg_level
+<P><STRONG><a name="[d3]"></a>vprintf</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, printfa.o(i.__0vprintf))
+<BR><BR>[Called By]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;log_msg_level
 </UL>
 
-<P><STRONG><a name="[ec]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+<P><STRONG><a name="[ed]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
 
-<P><STRONG><a name="[ed]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
+<P><STRONG><a name="[ee]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
 
-<P><STRONG><a name="[ee]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+<P><STRONG><a name="[ef]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 
-<P><STRONG><a name="[d3]"></a>bootloader_checkupdate</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, bootloader.o(i.bootloader_checkupdate))
+<P><STRONG><a name="[d4]"></a>bootloader_checkupdate</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, bootloader.o(i.bootloader_checkupdate))
 <BR><BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[c0]"></a>bootloader_executeapp</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, bootloader.o(i.bootloader_executeapp))
+<P><STRONG><a name="[c0]"></a>bootloader_executeapp</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, bootloader.o(i.bootloader_executeapp))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = bootloader_executeapp
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MSR_MSP
@@ -1095,120 +1095,135 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[c5]"></a>bootloader_get_backup_addr</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, bootloader.o(i.bootloader_get_backup_addr))
-<BR><BR>[Called By]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ota_protocol_process
-<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bootloader_init
+<P><STRONG><a name="[c2]"></a>bootloader_get_active_addr</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, bootloader.o(i.bootloader_get_active_addr))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = bootloader_get_active_addr &rArr; flash_read_generic
+</UL>
+<BR>[Calls]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_read_generic
+</UL>
+<BR>[Called By]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ota_protocol_process
 </UL>
 
-<P><STRONG><a name="[c2]"></a>bootloader_init</STRONG> (Thumb, 110 bytes, Stack size 24 bytes, bootloader.o(i.bootloader_init))
+<P><STRONG><a name="[c4]"></a>bootloader_get_backup_addr</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, bootloader.o(i.bootloader_get_backup_addr))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = bootloader_get_backup_addr &rArr; flash_read_generic
+</UL>
+<BR>[Calls]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_read_generic
+</UL>
+<BR>[Called By]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ota_protocol_process
+<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bootloader_init
+</UL>
+
+<P><STRONG><a name="[c5]"></a>bootloader_init</STRONG> (Thumb, 110 bytes, Stack size 24 bytes, bootloader.o(i.bootloader_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = bootloader_init &rArr; flash_erase &rArr; HAL_FLASHEx_Erase &rArr; FLASH_WaitForLastOperation
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_write_generic
+<BR>[Calls]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_write_generic
 <LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_read_generic
-<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_erase
-<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bootloader_get_backup_addr
-<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;log_msg_level
+<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_erase
+<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bootloader_get_backup_addr
+<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;log_msg_level
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[c8]"></a>bootloader_set_updateflag</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, bootloader.o(i.bootloader_set_updateflag))
+<P><STRONG><a name="[c9]"></a>bootloader_set_updateflag</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, bootloader.o(i.bootloader_set_updateflag))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = bootloader_set_updateflag &rArr; flash_erase &rArr; HAL_FLASHEx_Erase &rArr; FLASH_WaitForLastOperation
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_write_generic
+<BR>[Calls]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_write_generic
 <LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_read_generic
-<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_erase
+<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_erase
 </UL>
-<BR>[Called By]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ota_protocol_process
+<BR>[Called By]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ota_protocol_process
 </UL>
 
-<P><STRONG><a name="[c9]"></a>bootloader_updateapp</STRONG> (Thumb, 64 bytes, Stack size 8 bytes, bootloader.o(i.bootloader_updateapp))
+<P><STRONG><a name="[ca]"></a>bootloader_updateapp</STRONG> (Thumb, 64 bytes, Stack size 8 bytes, bootloader.o(i.bootloader_updateapp))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = bootloader_updateapp &rArr; flash_erase &rArr; HAL_FLASHEx_Erase &rArr; FLASH_WaitForLastOperation
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_write_generic
-<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_erase
-<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;log_msg_level
+<BR>[Calls]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_write_generic
+<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_erase
+<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;log_msg_level
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[d4]"></a>cal_crc16</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, ota_protocol.o(i.cal_crc16))
+<P><STRONG><a name="[d5]"></a>cal_crc16</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, ota_protocol.o(i.cal_crc16))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = cal_crc16
 </UL>
-<BR>[Called By]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ota_protocol_process
+<BR>[Called By]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ota_protocol_process
 </UL>
 
-<P><STRONG><a name="[ce]"></a>check_wakeup_singal</STRONG> (Thumb, 66 bytes, Stack size 16 bytes, uart_interact.o(i.check_wakeup_singal))
+<P><STRONG><a name="[cf]"></a>check_wakeup_singal</STRONG> (Thumb, 66 bytes, Stack size 16 bytes, uart_interact.o(i.check_wakeup_singal))
 <BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = check_wakeup_singal &rArr; uart_interact_main &rArr; check_update &rArr; ota_protocol_process &rArr; bootloader_set_updateflag &rArr; flash_erase &rArr; HAL_FLASHEx_Erase &rArr; FLASH_WaitForLastOperation
 </UL>
 <BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
-<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_interact_main
-<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
+<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_interact_main
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[c6]"></a>flash_erase</STRONG> (Thumb, 204 bytes, Stack size 40 bytes, flash.o(i.flash_erase))
+<P><STRONG><a name="[c7]"></a>flash_erase</STRONG> (Thumb, 204 bytes, Stack size 40 bytes, flash.o(i.flash_erase))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = flash_erase &rArr; HAL_FLASHEx_Erase &rArr; FLASH_WaitForLastOperation
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_FLASH_Unlock
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_FLASH_Lock
+<BR>[Calls]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_FLASH_Unlock
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_FLASH_Lock
 <LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_FLASHEx_Erase
-<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ota_protocol_process
-<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bootloader_set_updateflag
-<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bootloader_updateapp
-<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bootloader_init
+<BR>[Called By]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ota_protocol_process
+<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bootloader_set_updateflag
+<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bootloader_updateapp
+<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bootloader_init
 </UL>
 
 <P><STRONG><a name="[c3]"></a>flash_read_generic</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, flash.o(i.flash_read_generic))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = flash_read_generic
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bootloader_set_updateflag
-<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bootloader_init
+<BR>[Called By]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ota_protocol_process
+<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bootloader_set_updateflag
+<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bootloader_get_backup_addr
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bootloader_get_active_addr
+<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bootloader_init
 </UL>
 
-<P><STRONG><a name="[c7]"></a>flash_write_generic</STRONG> (Thumb, 54 bytes, Stack size 24 bytes, flash.o(i.flash_write_generic))
+<P><STRONG><a name="[c8]"></a>flash_write_generic</STRONG> (Thumb, 54 bytes, Stack size 24 bytes, flash.o(i.flash_write_generic))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = flash_write_generic &rArr; HAL_FLASH_Program &rArr; FLASH_WaitForLastOperation
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_FLASH_Unlock
+<BR>[Calls]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_FLASH_Unlock
 <LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_FLASH_Program
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_FLASH_Lock
-<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_FLASH_Lock
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ota_protocol_process
-<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bootloader_set_updateflag
-<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bootloader_updateapp
-<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bootloader_init
+<BR>[Called By]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ota_protocol_process
+<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bootloader_set_updateflag
+<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bootloader_updateapp
+<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bootloader_init
 </UL>
 
 <P><STRONG><a name="[62]"></a>fputc</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, usart.o(i.fputc))
-<BR>[Address Reference Count : 2]<UL><LI> printfa.o(i.__0printf)
-<LI> printfa.o(i.__0vprintf)
+<BR>[Address Reference Count : 2]<UL><LI> printfa.o(i.__0vprintf)
+<LI> printfa.o(i.__0printf)
 </UL>
-<P><STRONG><a name="[c4]"></a>log_msg_level</STRONG> (Thumb, 66 bytes, Stack size 64 bytes, log.o(i.log_msg_level))
+<P><STRONG><a name="[c6]"></a>log_msg_level</STRONG> (Thumb, 66 bytes, Stack size 64 bytes, log.o(i.log_msg_level))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = log_msg_level &rArr; __2printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vprintf
-<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<BR>[Calls]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vprintf
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ota_protocol_process
-<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bootloader_updateapp
-<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bootloader_init
+<BR>[Called By]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ota_protocol_process
+<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bootloader_updateapp
+<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bootloader_init
 <LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[5b]"></a>main</STRONG> (Thumb, 138 bytes, Stack size 0 bytes, main.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = main &rArr; check_wakeup_singal &rArr; uart_interact_main &rArr; check_update &rArr; ota_protocol_process &rArr; bootloader_set_updateflag &rArr; flash_erase &rArr; HAL_FLASHEx_Erase &rArr; FLASH_WaitForLastOperation
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;log_msg_level
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_wakeup_singal
-<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bootloader_updateapp
-<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bootloader_init
+<BR>[Calls]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;log_msg_level
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_wakeup_singal
+<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bootloader_updateapp
+<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bootloader_init
 <LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bootloader_executeapp
-<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bootloader_checkupdate
+<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bootloader_checkupdate
 <LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART6_UART_Init
 <LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART1_UART_Init
 <LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_IWDG_Init
@@ -1217,46 +1232,48 @@ Global Symbols
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspDeInit
 <LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
 <LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
-<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
-<P><STRONG><a name="[cd]"></a>ota_protocol_process</STRONG> (Thumb, 228 bytes, Stack size 32 bytes, ota_protocol.o(i.ota_protocol_process))
+<P><STRONG><a name="[ce]"></a>ota_protocol_process</STRONG> (Thumb, 274 bytes, Stack size 32 bytes, ota_protocol.o(i.ota_protocol_process))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = ota_protocol_process &rArr; bootloader_set_updateflag &rArr; flash_erase &rArr; HAL_FLASHEx_Erase &rArr; FLASH_WaitForLastOperation
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_write_generic
-<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_erase
-<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bootloader_set_updateflag
-<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bootloader_get_backup_addr
-<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;log_msg_level
+<BR>[Calls]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_write_generic
+<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_read_generic
+<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_erase
+<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bootloader_set_updateflag
+<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bootloader_get_backup_addr
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bootloader_get_active_addr
+<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;log_msg_level
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
-<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SystemReset
-<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cal_crc16
+<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SystemReset
+<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cal_crc16
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_update
+<BR>[Called By]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_update
 </UL>
 <P>
 <H3>
 Local Symbols
 </H3>
-<P><STRONG><a name="[ca]"></a>check_update</STRONG> (Thumb, 52 bytes, Stack size 16 bytes, uart_interact.o(i.check_update))
+<P><STRONG><a name="[cb]"></a>check_update</STRONG> (Thumb, 52 bytes, Stack size 16 bytes, uart_interact.o(i.check_update))
 <BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = check_update &rArr; ota_protocol_process &rArr; bootloader_set_updateflag &rArr; flash_erase &rArr; HAL_FLASHEx_Erase &rArr; FLASH_WaitForLastOperation
 </UL>
-<BR>[Calls]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ota_protocol_process
-<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
+<BR>[Calls]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ota_protocol_process
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
 </UL>
-<BR>[Called By]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_interact_main
+<BR>[Called By]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_interact_main
 </UL>
 
-<P><STRONG><a name="[cf]"></a>uart_interact_main</STRONG> (Thumb, 78 bytes, Stack size 16 bytes, uart_interact.o(i.uart_interact_main))
+<P><STRONG><a name="[d0]"></a>uart_interact_main</STRONG> (Thumb, 78 bytes, Stack size 16 bytes, uart_interact.o(i.uart_interact_main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = uart_interact_main &rArr; check_update &rArr; ota_protocol_process &rArr; bootloader_set_updateflag &rArr; flash_erase &rArr; HAL_FLASHEx_Erase &rArr; FLASH_WaitForLastOperation
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_update
-<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
+<BR>[Calls]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_update
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_wakeup_singal
+<BR>[Called By]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_wakeup_singal
 </UL>
 
 <P><STRONG><a name="[87]"></a>FLASH_Program_Byte</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f4xx_hal_flash.o(i.FLASH_Program_Byte))

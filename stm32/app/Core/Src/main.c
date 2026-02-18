@@ -108,7 +108,7 @@ int main(void)
 //    // onenet_mqtt_test();
 ////    onenet_http_test();
 //  }
-
+	printf("app_address is 0x%08x\r\n", app_address);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -118,9 +118,9 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-      printf("Hello114\r\n");
+      printf("Hello 1.3\r\n");
 	  HAL_IWDG_Refresh(&hiwdg);
-      HAL_Delay(500);
+      HAL_Delay(1000);
       
       // 检查新版本固件
 //      ymodem_execute();

@@ -29,6 +29,7 @@ typedef struct {
 #define fw_header_size		36	// ×Ö½Ú
 
 int bootloader_checkupdate(void);
+uint32_t bootloader_get_active_addr(void);
 uint32_t bootloader_get_backup_addr(void);
 void bootloader_set_updateflag(uint8_t val);
 void bootloader_set_errorflag(uint8_t val);
