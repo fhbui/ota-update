@@ -71,9 +71,9 @@ void SystemClock_Config(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-	uint32_t app_address = *(volatile uint32_t*)0x08008000;
-	SCB->VTOR = app_address; // 更改中断向量表地址
-	
+//	uint32_t app_address = *(volatile uint32_t*)0x08008000;
+//	SCB->VTOR = app_address; // 更改中断向量表地址
+	SCB->VTOR = 0x08020000;
 	hiwdg.Instance = IWDG;
 	HAL_IWDG_Refresh(&hiwdg);
 	
@@ -108,7 +108,7 @@ int main(void)
 //    // onenet_mqtt_test();
 ////    onenet_http_test();
 //  }
-	printf("app_address is 0x%08x\r\n", app_address);
+//	printf("app_address is 0x%08x\r\n", app_address);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -118,7 +118,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-      printf("Hello 1.3\r\n");
+      printf("Hello 1.1\r\n");
 	  HAL_IWDG_Refresh(&hiwdg);
       HAL_Delay(1000);
       

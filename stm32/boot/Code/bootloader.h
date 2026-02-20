@@ -5,9 +5,11 @@
 
 // 定义分区情况
 #define SHARED_ADDR		0x08008000
-#define APP1_ADDR   	0x08020000
-#define APP2_ADDR   	0x08040000
+#define APP_ADDR   		0x08020000
 #define APP_SIZE    	0xA000
+
+#define BACKUP_ADDR		0x000000
+#define TEMP_ADDR		0x020000
 
 // 固件包头文件
 #pragma pack(push, 1)  // 强制1字节对齐，无填充

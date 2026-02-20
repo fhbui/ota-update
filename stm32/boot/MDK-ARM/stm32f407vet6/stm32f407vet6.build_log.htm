@@ -22,7 +22,7 @@ Dialog DLL:      TCM.DLL V1.46.0.0
  
 <h2>Project:</h2>
 J:\my_project\04_my_github\ota-update\stm32\boot\MDK-ARM\stm32f407vet6.uvprojx
-Project File Date:  02/16/2026
+Project File Date:  02/19/2026
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'J:\software\Keil_v5_32\ARM\ARMCC\Bin'
@@ -31,14 +31,22 @@ compiling bootloader.c...
 ..\Code\log.h(21): warning:  #1-D: last line of file ends without a newline
   #endif
 ..\Code\bootloader.c(81): warning:  #223-D: function "log_msg_level" declared implicitly
-  	LOG_DEBUG(TAG, "new partition is 0x%08x", shared_info.active_app_addr);
-..\Code\bootloader.c(93): warning:  #223-D: function "log_msg_level" declared implicitly
-  	LOG_DEBUG(TAG, "active addr is 0x%08x", shared_info.active_app_addr);
-..\Code\bootloader.c: 3 warnings, 0 errors
+  		LOG_DEBUG(TAG, "read from 0x%08x, write to 0x%08x", source_addr+128*i, target_addr+128*i);
+..\Code\bootloader.c(98): warning:  #223-D: function "log_msg_level" declared implicitly
+  		LOG_DEBUG(TAG, "read from 0x%08x, write to 0x%08x", source_addr+128*for_temp, target_addr+128*for_temp);
+..\Code\bootloader.c(109): warning:  #223-D: function "log_msg_level" declared implicitly
+  		LOG_DEBUG(TAG, "store to TEMP_ADDR");
+..\Code\bootloader.c(118): warning:  #223-D: function "log_msg_level" declared implicitly
+  		LOG_DEBUG(TAG, "update the APP_ADDR");
+..\Code\bootloader.c(128): warning:  #223-D: function "log_msg_level" declared implicitly
+  		LOG_DEBUG(TAG, "execute backup");
+..\Code\bootloader.c(182): warning:  #223-D: function "log_msg_level" declared implicitly
+  		LOG_ERROR(TAG, "Return to old version!");
+..\Code\bootloader.c: 7 warnings, 0 errors
 linking...
-Program Size: Code=14116 RO-data=588 RW-data=60 ZI-data=4868  
+Program Size: Code=16488 RO-data=588 RW-data=64 ZI-data=4952  
 FromELF: creating hex file...
-"stm32f407vet6\stm32f407vet6.axf" - 0 Error(s), 3 Warning(s).
+"stm32f407vet6\stm32f407vet6.axf" - 0 Error(s), 7 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -62,7 +70,7 @@ Package Vendor: Keil
 
    * Component: ARM::CMSIS:CORE:5.4.0
       Include file:  CMSIS\Core\Include\tz_context.h
-Build Time Elapsed:  00:00:01
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>

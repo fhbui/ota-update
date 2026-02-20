@@ -20,6 +20,7 @@
 #include "main.h"
 #include "dma.h"
 #include "iwdg.h"
+#include "spi.h"
 #include "usart.h"
 #include "gpio.h"
 
@@ -31,6 +32,7 @@
 #include <string.h>
 #include "uart_interact.h"
 #include "log.h"
+//#include "w25qxx.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -96,9 +98,11 @@ int main(void)
   MX_DMA_Init();
   MX_USART1_UART_Init();
   MX_USART6_UART_Init();
+  MX_SPI2_Init();
   /* USER CODE BEGIN 2 */
   printf("\r\n");
   LOG_INFO(TAG, "This is BootLoader code");
+//  w25qxx_test();
   bootloader_init();
 
   check_wakeup_singal();

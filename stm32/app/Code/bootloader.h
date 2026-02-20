@@ -14,6 +14,7 @@ typedef struct _shared_info{
 	uint32_t active_app_addr;
 	uint8_t update_flag;
 	uint8_t error_flag;
+	uint8_t status;
 }shared_info_t;
 #pragma pack(pop)
 

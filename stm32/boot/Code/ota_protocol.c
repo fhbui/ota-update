@@ -9,12 +9,19 @@ extern UART_HandleTypeDef huart6;
 //============== flash interface ========================
 #include "flash.h"
 
-#define get_download_addr()                 bootloader_get_backup_addr()
-#define get_app_addr()						bootloader_get_active_addr()
-#define erase_flash_sector(addr)                flash_erase(addr, 1)
+//#define get_download_addr()                 bootloader_get_backup_addr()
+//#define get_app_addr()						bootloader_get_active_addr()
+//#define erase_flash_sector(addr)                flash_erase(addr, 1)
 #define read_from_flash(addr, pdata, size)			flash_read_generic(addr, pdata, size)
-#define write_to_flash(addr, pdata, size)         flash_write_generic(addr, pdata, size)
-//=======================================================
+//#define write_to_flash(addr, pdata, size)         flash_write_generic(addr, pdata, size)
+//============== w25qxx interface =======================
+#include "w25qxx.h"
+
+#define erase_flash_sector(addr)                w25qxx_erase_block(addr, 1)
+#define write_to_flash(addr, pdata, size)         w25qxx_buffer_write(addr, pdata, size)
+// ======================================================
+#define get_download_addr()			BACKUP_ADDR
+#define get_app_addr()				APP_ADDR
 
 #define ACK     0x06
 #define NACK    0x07
@@ -63,7 +70,7 @@ void ota_protocol_process(void){
 	if(ota_protocol_recv_flag==0)   return ;
     ota_protocol_recv_flag = 0;
 
-    static uint32_t download_addr, app_addr;
+    static uint32_t download_addr, app_addr, total_size;
     if(ota_protocol_buffer[0]!=0x55 || ota_protocol_buffer[1]!=0xAA){
         return ;
     }
@@ -83,8 +90,9 @@ void ota_protocol_process(void){
     frame_info.cmd = ota_protocol_buffer[3];
     if(frame_info.cmd == CMD_START){
 		LOG_INFO(TAG, "CMD_START");
+		total_size = 0;
 		app_addr = get_app_addr();
-        download_addr = get_download_addr();
+        download_addr = get_download_addr()+4;	// front addr used to set size
         erase_flash_sector(download_addr);
         uint8_t ack = ACK;
         uart_tans_func(&ack, 1);
@@ -93,6 +101,7 @@ void ota_protocol_process(void){
         LOG_INFO(TAG, "CMD_COMPLETE");
         uint8_t ack = ACK;
         uart_tans_func(&ack, 1);
+		write_to_flash(get_download_addr(), (uint8_t*)&total_size, 4);
         bootloader_set_updateflag(1);
 		HAL_NVIC_SystemReset();
     }
@@ -102,6 +111,7 @@ void ota_protocol_process(void){
 		LOG_DEBUG(TAG, "Copy to 0x%08x", download_addr);
         download_addr += frame_info.len;	// COPY_CMD should full of 128 btyes payload so that the len is 128
 		app_addr += frame_info.len;		// old frame size is same as new unless near the end
+		total_size += frame_info.len;
         uint8_t ack = ACK;
         uart_tans_func(&ack, 1);
     }
@@ -110,6 +120,7 @@ void ota_protocol_process(void){
 		LOG_DEBUG(TAG, "Write to 0x%08x", download_addr);
         download_addr += frame_info.len;	// COPY_CMD should full of 128 btyes payload so that the len is 128
 		app_addr += frame_info.len;		// old frame size is same as new unless near the end
+		total_size += frame_info.len;
         uint8_t ack = ACK;
         uart_tans_func(&ack, 1);
     }

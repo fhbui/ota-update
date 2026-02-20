@@ -29,9 +29,11 @@ stm32f407vet6\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ra
 stm32f407vet6\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_iwdg.h
 stm32f407vet6\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 stm32f407vet6\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
+stm32f407vet6\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
 stm32f407vet6\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 stm32f407vet6\main.o: ../Core/Inc/dma.h
 stm32f407vet6\main.o: ../Core/Inc/iwdg.h
+stm32f407vet6\main.o: ../Core/Inc/spi.h
 stm32f407vet6\main.o: ../Core/Inc/usart.h
 stm32f407vet6\main.o: ../Core/Inc/gpio.h
 stm32f407vet6\main.o: ../Code/bootloader.h
