@@ -175,8 +175,9 @@ def ota_update_diff(path_old, path_new):
             # 分情况组包
             if chunk1 == chunk2:
                 # print(f"\nSame at offset {offset}")
-                actual_size -= 128
-                frame = build_frame(CMD_COPY, chunk2)
+
+                actual_size -= len(chunk2)
+                frame = build_frame(CMD_COPY, bytes([len(chunk2)]))
             else:
                 frame = build_frame(CMD_WRITE, chunk2)
 

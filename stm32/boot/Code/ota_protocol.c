@@ -106,6 +106,7 @@ void ota_protocol_process(void){
 		HAL_NVIC_SystemReset();
     }
     else if(frame_info.cmd == CMD_COPY){
+		frame_info.len = ota_protocol_buffer[4];
 		read_from_flash(app_addr, frame_info.payload, frame_info.len);
 		write_to_flash(download_addr, frame_info.payload, frame_info.len);
 		LOG_DEBUG(TAG, "Copy to 0x%08x", download_addr);
